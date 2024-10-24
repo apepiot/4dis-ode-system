@@ -270,7 +270,7 @@ end
 for k=1:nbCompartments
     currentComp = tabComp(k,:);
     if sum(currentComp.no==[compSSSS.no,compPSSS.no,compTSSS.no])==0
-        if 1 
+        if 1  %currentComp.Ct ~= "IS" && currentComp.Ng ~= "IS"
             if currentComp.HIV=="P" || currentComp.HIV=="Ip" || currentComp.HIV=="Cp"
                 M(currentComp.no,currentComp.no) = M(currentComp.no,currentComp.no)-eta_c_prep;
                 recepComp = currentComp(:,1:4); recepComp.Ct ="S";
